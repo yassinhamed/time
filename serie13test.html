@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher la Date et l'Heure Système</title>
+</head>
+<body>
+    <div>
+        <p>La date système est :</p>
+        <p id="system-date"></p>
+        <p>L'heure système est :</p>
+        <form>
+            <input type="text" id="system-time" readonly>
+        </form>
+    </div>
+
+    <script>
+        /*function formatDate(date) {
+            const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+            let dayName = days[date.getDay()];
+            let day = date.getDate();
+            let monthName = months[date.getMonth()];
+            let year = date.getFullYear();
+
+            // Ajouter un zéro devant les jours inférieurs à 10
+            if (day < 10) day = '0' + day;
+
+            return `${dayName} ${day} ${monthName} ${year}`;
+        }
+
+        function formatTime(date) {
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+
+            // Ajouter un zéro devant les valeurs inférieures à 10
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            return `${hours} : ${minutes} : ${seconds}`;
+        }
+
+        function updateDateTime() {
+            const currentDate = new Date();
+            document.getElementById('system-date').textContent = formatDate(currentDate);
+            document.getElementById('system-time').value = formatTime(currentDate);
+
+            // Réappeler la fonction après 1 seconde
+            setTimeout(updateDateTime, 1000);
+        }
+
+        updateDateTime();*/
+        function check(){
+            var date1 = document.compare.date1;
+            var date2= document.compare.date2;
+            if (date1 > date2) {
+                alert("La date 1 est supérieure à la date 2");}
+            else{
+                alert("La date 1 est inférieure à la date 2");
+            }
+
+        
+
+        }
+    </script>
+    <form name="compare" >
+        <input type="date" name="date1">
+        <input type="date"name="date2">
+        <button type="submit" onclick="check()">check</button>
+
+    </form>
+</body>
+</html>
